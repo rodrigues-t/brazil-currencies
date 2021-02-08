@@ -3,7 +3,7 @@ import {
     getAllCurrencies,
     getCurrencyByName,
     getCurrencyBySymbol,
-    getCureencyByDate,
+    getCurrencyByDate,
     getUniqueSymbols,
     getUniqueNames,
 } from './brazil-currencies/index';
@@ -13,7 +13,7 @@ export {
     getAllCurrencies,
     getCurrencyByName,
     getCurrencyBySymbol,
-    getCureencyByDate,
+    getCurrencyByDate,
     getUniqueSymbols,
     getUniqueNames,
 }
