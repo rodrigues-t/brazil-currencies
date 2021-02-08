@@ -1,3 +1,4 @@
+import { isDate } from 'date-fns';
 import React, { useState } from 'react';
 import './App.css';
 import { getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies } from './brazil-currencies-lib'
@@ -5,8 +6,10 @@ import { getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbo
 function App() {
   const [name, setName] = useState();
   const [symbol, setSymbol] = useState();
+  const [date, setDate] = useState();
   const [currByName, setCurrByName] = useState();
   const [currBySymbol, setCurrBySymbol] = useState();
+  const [currByDate, setCurrByDate] = useState();
 
   const currencyElement = currency => {
     return (
@@ -21,6 +24,10 @@ function App() {
 
   const onChangeName = e => setName(e.target.value);
   const onChangeSymbol = e => setSymbol(e.target.value);
+  const onChangeDate = e => {
+    let parts = e.target.value.split('-');
+    setDate(new Date(parts[0], Number(parts[1]) - 1, parts[2]));
+  }
   const onClickSearchByName = e => {
     e.preventDefault();
     setCurrByName(getCurrencyByName(name));
@@ -28,6 +35,13 @@ function App() {
   const onClickSearchBySymbol = e => {
     e.preventDefault();
     setCurrBySymbol(getCurrencyBySymbol(symbol));
+  }
+
+  const onClickSearchByDate = e => {
+    e.preventDefault();
+    if (isDate(date)) {
+      setCurrByDate(getCurrencyByDate(date));
+    }
   }
 
   return (
@@ -55,6 +69,19 @@ function App() {
           {
             currBySymbol && currBySymbol.length ?
               currBySymbol.map(c => currencyElement(c))
+              :
+              <i>None</i>
+          }
+        </div>
+        <div className="card-row">
+          <span>Search by Date</span>
+          <input type="date" className="input" onChange={onChangeDate} />
+          <input type="submit" className="btn" value="Search" onClick={onClickSearchByDate} />
+        </div>
+        <div className="card-row">
+          {
+            currByDate ?
+              currencyElement(currByDate)
               :
               <i>None</i>
           }
