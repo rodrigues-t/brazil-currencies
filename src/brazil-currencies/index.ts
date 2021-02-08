@@ -3,8 +3,8 @@ import { CurrenciesHistory, Currency } from "./currencies";
 
 const getAllCurrencies = (): Array<Currency> => CurrenciesHistory;
 const getCurrencyBySymbol = (symbol: string): Array<Currency> => CurrenciesHistory.filter(curr => curr.symbol === symbol);
-const getCurrencyByName = (name: string): Array<Currency> => CurrenciesHistory.filter(curr => curr.name.toLocaleLowerCase() === name.toLocaleLowerCase());
-const getCureencyByDate = (date: Date): Currency | undefined => {
+const getCurrencyByName = (name: string): Array<Currency> => CurrenciesHistory.filter(curr => curr.name.toLocaleLowerCase() === name?.toLocaleLowerCase());
+const getCurrencyByDate = (date: Date): Currency | undefined => {
     const dt = startOfDay(date);
     return CurrenciesHistory.find(curr =>
         isAfter(dt, curr.startDate) || isSameDay(dt, curr.startDate) ?
@@ -22,7 +22,7 @@ export {
     getAllCurrencies,
     getCurrencyByName,
     getCurrencyBySymbol,
-    getCureencyByDate,
+    getCurrencyByDate,
     getUniqueSymbols,
     getUniqueNames,
 
