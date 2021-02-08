@@ -3,7 +3,7 @@ import { CurrenciesHistory, Currency } from "./currencies";
 
 const getAllCurrencies = (): Array<Currency> => CurrenciesHistory;
 const getCurrencyBySymbol = (symbol: string): Array<Currency> => CurrenciesHistory.filter(curr => curr.symbol === symbol);
-const getCurrencyByName = (name: string): Array<Currency> => CurrenciesHistory.filter(curr => curr.name === name);
+const getCurrencyByName = (name: string): Array<Currency> => CurrenciesHistory.filter(curr => curr.name.toLocaleLowerCase() === name.toLocaleLowerCase());
 const getCureencyByDate = (date: Date): Currency | undefined => {
     const dt = startOfDay(date);
     return CurrenciesHistory.find(curr =>
@@ -15,10 +15,15 @@ const getCureencyByDate = (date: Date): Currency | undefined => {
             false
     );
 }
-//uniqueSymbols, unique names
+const getUniqueSymbols = (): Array<string> => [...new Set<string>(CurrenciesHistory.map(curr => curr.symbol))];
+const getUniqueNames = (): Array<string> => [...new Set<string>(CurrenciesHistory.map(curr => curr.name))];
+
 export {
     getAllCurrencies,
     getCurrencyByName,
     getCurrencyBySymbol,
     getCureencyByDate,
+    getUniqueSymbols,
+    getUniqueNames,
+
 }
