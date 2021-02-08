@@ -15,7 +15,7 @@ const CurrenciesHistory: Array<Currency> = [
     { name: 'Cruzado Novo', symbol: 'NCz$', startDate: new Date(1989, 0, 16), endDate: new Date(1990, 2, 15) },
     { name: 'Cruzeiro', symbol: 'Cr$', startDate: new Date(1990, 2, 16), endDate: new Date(1993, 6, 31) },
     { name: 'Cruzeiro Real', symbol: 'CR$', startDate: new Date(1993, 7, 1), endDate: new Date(1994, 5, 30) },
-    { name: 'Real', symbol: 'R$', startDate: new Date(1993, 6, 1), endDate: null },
+    { name: 'Real', symbol: 'R$', startDate: new Date(1994, 6, 1), endDate: null },
 ];
 
 export {
