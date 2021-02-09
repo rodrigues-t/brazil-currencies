@@ -1,5 +1,5 @@
 import { isDate } from 'date-fns';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies } from './brazil-currencies-lib'
 
@@ -10,6 +10,15 @@ function App() {
   const [currByName, setCurrByName] = useState();
   const [currBySymbol, setCurrBySymbol] = useState();
   const [currByDate, setCurrByDate] = useState();
+
+  useEffect(() => {
+    console.log(getUniqueNames().join(', '));
+    console.log(getUniqueSymbols().join(', '));
+    console.log(getCurrencyByName('real'));
+    console.log(getCurrencyBySymbol('Cr$'));
+    console.log(getCurrencyByDate(new Date(1899, 10, 10)));
+    console.log(getAllCurrencies());
+  });
 
   const currencyElement = currency => {
     return (
