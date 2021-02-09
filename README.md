@@ -64,8 +64,8 @@ $ npm run dev
 ```
 ## Functions
 
-| Handler               |Description                                          | Parameter      | Return          |
-|-----------------------|-----------------------------------------------------|----------------|-----------------|
+| Name                  |Description                                          | Parameter      | Return             |
+|-----------------------|-----------------------------------------------------|----------------|--------------------|
 | `getAllCurrencies`    | Get the list of all currencies in the history       |                | Array&lt;Currency> |
 | `getCurrencyBySymbol` | Get currencies by the symbol (Can be more than one) | symbol: string | Array&lt;Currency> |
 | `getCurrencyByName`   | Get currencies by the name (Can be more than one)   | name: string   | Array&lt;Currency> |
