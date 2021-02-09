@@ -4,6 +4,13 @@
   "description": "Find out the Brazil currency name and symbol by date",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "typings": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "rollup -c",
     "build-watch": "rollup -c -w",
