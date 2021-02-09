@@ -1,6 +1,6 @@
 ## Sobre
 
-Brazil Currencies (Moedas do Brasil) é um conjunto de funções que te permite consultar as moedas brasileira na história. É possível consultar qual era a moeda brasileira em um data específica. Você também pode consultar as moedas por nome, símbolo entre outras coisas.
+Brazil Currencies (Moedas do Brasil) é um conjunto de funções que te permite consultar as moedas brasileiras na história. É possível consultar qual era a moeda brasileira em um data específica. Você também pode consultar as moedas por nome, símbolo entre outras coisas.
 
 ## Instalação
 ```
