@@ -9,7 +9,14 @@ $ npm i brazil-currencies
 
 ## Uso
 ```javascript
-import {getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies} from 'brazil-currencies'
+import {
+    getUniqueNames, 
+    getUniqueSymbols, 
+    getCurrencyByName, 
+    getCurrencyBySymbol, 
+    getCurrencyByDate, 
+    getAllCurrencies
+} from 'brazil-currencies'
 
 console.log(getUniqueNames().join(', '));
 //Réis, Mil Réis, Cruzeiro, Cruzeiro Novo, Cruzado, Cruzado Novo, Cruzeiro Real, Real
