@@ -1,6 +1,6 @@
 {
   "name": "brazil-currencies",
-  "version": "0.9.0",
+  "version": "0.1.0",
   "description": "Search for Brazilian currencies in history",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
