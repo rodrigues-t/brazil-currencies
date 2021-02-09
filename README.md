@@ -6,7 +6,7 @@ Brazil Currencies is a set of javascript functions that allow you to search braz
 
 ### PT
 
-Brazil Currencies (Moedas do Brasil) é um conjunto de funções que te permite consultar as moedas brasileira na história. É possível consultar qual era a moeda brasileira em um data específica. Você também pode consultar as moedas por nome, símbolo entre outras coisas.
+Brazil Currencies (Moedas do Brasil) é um conjunto de funções que te permite consultar as moedas brasileira na história. É possível consultar qual era a moeda brasileira em um data específica. Você também pode consultar as moedas por nome, símbolo entre outras coisas. Clique [aqui](README.PT.md) para ver o readme em português.
 
 ## Install
 ```
@@ -15,7 +15,14 @@ $ npm i brazil-currencies
 
 ## Usage
 ```javascript
-import {getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies} from 'brazil-currencies'
+import {
+    getUniqueNames, 
+    getUniqueSymbols, 
+    getCurrencyByName, 
+    getCurrencyBySymbol, 
+    getCurrencyByDate, 
+    getAllCurrencies
+} from 'brazil-currencies'
 
 console.log(getUniqueNames().join(', '));
 //Réis, Mil Réis, Cruzeiro, Cruzeiro Novo, Cruzado, Cruzado Novo, Cruzeiro Real, Real
