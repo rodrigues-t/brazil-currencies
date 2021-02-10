@@ -1,7 +1,8 @@
 import { isDate } from 'date-fns';
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import { getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies } from './brazil-currencies-lib'
+// import { getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies } from './brazil-currencies-lib'
+import { getUniqueNames, getUniqueSymbols, getCurrencyByName, getCurrencyBySymbol, getCurrencyByDate, getAllCurrencies } from 'brazil-currencies'
 
 function App() {
   const [name, setName] = useState();
